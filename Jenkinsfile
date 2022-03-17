@@ -9,16 +9,14 @@ pipeline {
     stage("Build"){
         steps{
             git 'https://github.com/PavelLyutov/TestingJenkins.git'
-            dir('src') {
                    bat 'mvn clean compile'
-            }
         }
     }
     stage("Unit Test"){
         steps{
-                    dir('src') {
+       
                            bat 'mvn clean verify'
-                    }
+           
         }
     }
 
