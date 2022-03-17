@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage("Build"){
         steps{
-            git 'https://github.com/PavelLyutov/IT-Talants-Final-Project-kinoarena.git'
+            git 'https://github.com/PavelLyutov/TestingJenkins.git'
             dir('src') {
                    bat 'mvn clean compile'
             }
